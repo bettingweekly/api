@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :api, path: '/' do
+    namespace :v1 do
+      scope '/fizz_buzz' do
+        resources :fizz_buzzs, only: :index, path: '/'
+        resources :favourites, only: [:index, :create]
+      end
+    end
+  end
 end
