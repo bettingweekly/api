@@ -46,7 +46,6 @@ RSpec.describe Favourite, type: :model do
     it 'should allow a new favourite to be created for the limit number' do
       favourite = Favourite.create(number: 100_000_000_000)
       expect(favourite.valid?).to be_truthy
-      expect(favourite.errors[:number][0]).to eq "must be less than or equal to 100000000000"
     end
   end
 end
