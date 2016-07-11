@@ -2,7 +2,7 @@ module Api
   module V1
     class FizzBuzzsController < ApplicationController # :nodoc:
       def index
-        render json: FizzBuzz.all
+        render json: Search::FizzBuzzSearch.new(params).paginate
       end
     end
   end
