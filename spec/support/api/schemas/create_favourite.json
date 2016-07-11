@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "attributes"
+      ],
+      "prooperties": {
+        "id": { "type": "string" },
+        "type": { "type": "string" },
+        "attributes": {
+          "type": "object",
+          "required": [
+            "number",
+            "marked",
+            "result"
+          ],
+          "properties": {
+            "number": { "type": "integer" },
+            "marked": { "type": "boolean" },
+            "result": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
