@@ -53,10 +53,10 @@ module Pagination
 
     def links
       {
-          first: url_builder(first_page, per_page, url),
-          last: url_builder(last_page, per_page, url),
-          next: url_builder(next_page, per_page, url),
-          prev: url_builder(prev_page, per_page, url)
+        first: url_builder(first_page, per_page, url),
+        last: url_builder(last_page, per_page, url),
+        next: url_builder(next_page, per_page, url),
+        prev: url_builder(prev_page, per_page, url)
       }
     end
 

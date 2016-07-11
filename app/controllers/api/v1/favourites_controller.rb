@@ -6,7 +6,7 @@ module Api
       end
 
       def create
-        params.merge!(marked: true)
+        params[:marked] = true
         record = Favourite.create(params.permit(:number, :marked))
         if record.valid?
           render json: FizzBuzz.new(record.attributes)
