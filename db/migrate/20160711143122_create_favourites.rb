@@ -7,7 +7,7 @@ class CreateFavourites < ActiveRecord::Migration[5.0] # :nodoc:
       t.timestamps
     end
 
-    change_column :favourites, :number, :integer
+    change_column :favourites, :number, :integer, limit: 8
   end
 
   def down
