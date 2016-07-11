@@ -115,5 +115,11 @@ RSpec.describe Pagination::BasePagination, type: :model do
         expect(subject.prev_page).to be_nil
       end
     end
+
+    context '#url_builder' do
+      it 'should create url based on provided input' do
+        expect(subject.url_builder(10, 100, 'http://test.com')).to eq 'http://test.com?page=10&per_page=100'
+      end
+    end
   end
 end

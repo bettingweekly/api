@@ -1,7 +1,8 @@
 {
   "type": "object",
   "required": [
-    "data"
+    "data",
+    "links"
   ],
   "properties": {
     "data": {
@@ -30,6 +31,21 @@
             }
           }
         }
+      }
+    },
+    "links": {
+      "type": "object",
+      "required": [
+        "first",
+        "last",
+        "next",
+        "prev"
+      ],
+      "properties": {
+        "first": { "type": "string" },
+        "last": { "type": "string" },
+        "next": { "type": "any" },
+        "prev": { "type": "any" }
       }
     }
   }

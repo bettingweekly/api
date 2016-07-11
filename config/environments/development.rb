@@ -28,4 +28,6 @@ Rails.application.configure do
   config.active_record.migration_error = :page_load
 
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
 end

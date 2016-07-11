@@ -47,6 +47,19 @@ module Pagination
       page == 1 ? nil : page - 1
     end
 
+    def url_builder(page, per_page, base)
+      page.nil? ? nil : "#{base}?page=#{page}&per_page=#{per_page}"
+    end
+
+    def links
+      {
+          first: url_builder(first_page, per_page, url),
+          last: url_builder(last_page, per_page, url),
+          next: url_builder(next_page, per_page, url),
+          prev: url_builder(prev_page, per_page, url)
+      }
+    end
+
     private
 
     def default_page
