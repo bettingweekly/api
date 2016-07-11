@@ -12,8 +12,6 @@ This API allows you to do the following.
 ### Rails Version
 5.0.0
 
-```
-
 ### Run test suite
 ```sh
 $ rails db:migrate RAILS_ENV=test
